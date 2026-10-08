@@ -1,58 +1,43 @@
 body {
-    /***
-      ADD YOUR CUSTOM STYLING HERE. (INSIDE THE body {...} section.)
-      IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
-   ***/
-    //  background-color: white;
-    //  .content {
-    //   font-size: 14px;
-    //  }
-    //  h1 {
-    //   color: black;
-    //  }
+  /* 1. Paksa warna teks tabel & konten agar terang dan terbaca */
+  .markdown-preview-view table th,
+  .markdown-preview-view table td,
+  .markdown-preview-view p,
+  .markdown-preview-view li,
+  .content table th,
+  .content table td,
+  .content p,
+  .content li {
+    color: #f0f0f0 !important;
+  }
 
-body {
-  /* Atur warna latar & teks dasar jika diperlukan */
-}
+  /* 2. Beri latar belakang netral untuk tabel */
+  .markdown-preview-view table,
+  .content table {
+    background-color: #1e1e2e !important;
+    border-collapse: collapse !important;
+    width: 100%;
+  }
 
-/* 1. Paksa warna teks tabel & konten agar terang dan terbaca */
-.markdown-preview-view table th,
-.markdown-preview-view table td,
-.markdown-preview-view p,
-.markdown-preview-view li,
-.content table th,
-.content table td,
-.content p,
-.content li {
-  color: #f0f0f0 !important;
-}
+  .markdown-preview-view table th,
+  .content table th {
+    background-color: #2a2a3c !important;
+    color: #ffffff !important;
+  }
 
-/* 2. Beri latar belakang netral untuk tabel */
-.markdown-preview-view table,
-.content table {
-  background-color: #1e1e2e !important;
-  border-collapse: collapse !important;
-  width: 100%;
-}
+  .markdown-preview-view table tr:nth-child(even),
+  .content table tr:nth-child(even) {
+    background-color: #252538 !important;
+  }
 
-.markdown-preview-view table th,
-.content table th {
-  background-color: #2a2a3c !important;
-  color: #ffffff !important;
-}
+  /* 3. Komponen Leaflet Map / Popup agar tidak gelap */
+  .leaflet-container,
+  .leaflet-popup-content-wrapper,
+  .leaflet-popup-content {
+    color: #222222 !important;
+  }
 
-.markdown-preview-view table tr:nth-child(even),
-.content table tr:nth-child(even) {
-  background-color: #252538 !important;
-}
-
-/* 3. Komponen HTML / Leaflet Map / Popup agar tidak gelap */
-.leaflet-container,
-.leaflet-popup-content-wrapper,
-.leaflet-popup-content {
-  color: #222222 !important;
-}
-
-.leaflet-popup-content-wrapper {
-  background-color: #ffffff !important;
+  .leaflet-popup-content-wrapper {
+    background-color: #ffffff !important;
+  }
 }
