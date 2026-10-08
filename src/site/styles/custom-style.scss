@@ -10,14 +10,36 @@ body {
     //  h1 {
     //   color: black;
     //  }
+/* 1. Atur warna teks spesifik hanya pada isi sel tabel & paragraf */
+.markdown-rendered table th,
+.markdown-rendered table td,
+.markdown-rendered p,
+.markdown-rendered li {
+  color: #f0f0f0 !important;
 }
-/* Memaksa warna teks tabel & komponen HTML agar terang/jelas */
-.markdown-rendered table, 
-.markdown-rendered div {
+
+/* 2. Beri latar belakang netral yang jelas untuk baris tabel */
+.markdown-rendered table {
+  background-color: #1e1e2e !important;
+  border-collapse: collapse;
+}
+
+.markdown-rendered table th {
+  background-color: #2a2a3c !important;
   color: #ffffff !important;
 }
 
-/* Membersihkan latar belakang agar tidak tertimpa mode gelap otomatis */
-.markdown-rendered table tr {
-  background-color: rgba(255, 255, 255, 0.05) !important;
+.markdown-rendered table tr:nth-child(even) {
+  background-color: #252538 !important;
+}
+
+/* 3. Perbaikan khusus komponen HTML / Leaflet Map / Cards agar tidak gelap */
+.markdown-rendered .leaflet-container,
+.markdown-rendered .leaflet-popup-content-wrapper,
+.markdown-rendered .leaflet-popup-content {
+  color: #222222 !important; /* Popup peta tetap pakai teks gelap di atas background putih */
+}
+
+.markdown-rendered .leaflet-popup-content-wrapper {
+  background-color: #ffffff !important;
 }
