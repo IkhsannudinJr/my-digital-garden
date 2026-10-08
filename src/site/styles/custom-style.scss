@@ -1,43 +1,56 @@
-body {
-  /* 1. Paksa warna teks tabel & konten agar terang dan terbaca */
-  .markdown-preview-view table th,
-  .markdown-preview-view table td,
-  .markdown-preview-view p,
-  .markdown-preview-view li,
-  .content table th,
-  .content table td,
-  .content p,
-  .content li {
-    color: #f0f0f0 !important;
-  }
+/* 1. Memaksa latar belakang utama dan teks umum agar terang/kontras */
+body, 
+.content, 
+.markdown-rendered, 
+.markdown-preview-view {
+  color: #e2e8f0 !important;
+}
 
-  /* 2. Beri latar belakang netral untuk tabel */
-  .markdown-preview-view table,
-  .content table {
-    background-color: #1e1e2e !important;
-    border-collapse: collapse !important;
-    width: 100%;
-  }
+/* 2. Memaksa Kontras Tabel (Teks Putih di atas Background Gelap) */
+.markdown-rendered table,
+.markdown-preview-view table,
+.content table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  background-color: #1e1e2e !important;
+  color: #ffffff !important;
+}
 
-  .markdown-preview-view table th,
-  .content table th {
-    background-color: #2a2a3c !important;
-    color: #ffffff !important;
-  }
+.markdown-rendered table th,
+.markdown-rendered table td,
+.markdown-preview-view table th,
+.markdown-preview-view table td,
+.content table th,
+.content table td {
+  color: #ffffff !important;
+  border: 1px solid #313244 !important;
+  padding: 8px 12px !important;
+}
 
-  .markdown-preview-view table tr:nth-child(even),
-  .content table tr:nth-child(even) {
-    background-color: #252538 !important;
-  }
+.markdown-rendered table th,
+.markdown-preview-view table th,
+.content table th {
+  background-color: #313244 !important;
+  font-weight: bold !important;
+}
 
-  /* 3. Komponen Leaflet Map / Popup agar tidak gelap */
-  .leaflet-container,
-  .leaflet-popup-content-wrapper,
-  .leaflet-popup-content {
-    color: #222222 !important;
-  }
+.markdown-rendered table tr:nth-child(even),
+.markdown-preview-view table tr:nth-child(even),
+.content table tr:nth-child(even) {
+  background-color: #181825 !important;
+}
 
-  .leaflet-popup-content-wrapper {
-    background-color: #ffffff !important;
-  }
+/* 3. Memaksa Komponen Peta / Leaflet agar tidak tertutup warna gelap */
+.leaflet-container {
+  background-color: #222222 !important;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-content {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+}
+
+.leaflet-popup-content * {
+  color: #111111 !important;
 }
