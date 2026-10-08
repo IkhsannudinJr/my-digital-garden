@@ -11,3 +11,13 @@ body {
     //   color: black;
     //  }
 }
+/* Memaksa warna teks tabel & komponen HTML agar terang/jelas */
+.markdown-rendered table, 
+.markdown-rendered div {
+  color: #ffffff !important;
+}
+
+/* Membersihkan latar belakang agar tidak tertimpa mode gelap otomatis */
+.markdown-rendered table tr {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
