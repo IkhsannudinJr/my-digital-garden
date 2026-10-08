@@ -55,3 +55,98 @@ body,
 .leaflet-popup-content * {
   color: #111111 !important;
 }
+
+
+/* =========================================================
+   FIX LAYOUT GRID TABEL & CAPSULE KKN DIGITAL GARDEN
+   ========================================================= */
+
+/* 1. Container Grid Tabel */
+.flex-grid-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 4px;
+  margin-top: 15px;
+  overflow-x: auto;
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: 80px 140px 100px 120px 110px 180px 110px 110px 110px 140px 180px;
+  gap: 6px;
+  align-items: center;
+  background: rgba(30, 30, 46, 0.7);
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-row {
+  background: #2a2a3c !important;
+  font-weight: bold;
+  color: #89b4fa !important;
+}
+
+.grid-cell {
+  font-size: 11px;
+  color: #cdd6f4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 2. Capsule Kecamatan Multi-Select */
+.badge-row-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.seamless-kec-capsule {
+  background: rgba(137, 180, 250, 0.15);
+  color: #89b4fa;
+  border: 1px solid rgba(137, 180, 250, 0.3);
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 3. Style Dropdown Status & Input Date/Text */
+.glass-select-inline,
+.glass-date-input,
+.glass-text-input-inline {
+  background: #11111b !important;
+  color: #cdd6f4 !important;
+  border: 1px solid #45475a !important;
+  border-radius: 6px;
+  padding: 4px 6px;
+  font-size: 11px;
+  width: 100%;
+}
+
+.inline-status-proses { color: #fab387 !important; border-color: #fab387 !important; }
+.inline-status-selesai { color: #a6e3a1 !important; border-color: #a6e3a1 !important; }
+.inline-status-belum { color: #f38ba8 !important; border-color: #f38ba8 !important; }
+
+/* 4. PIN & Marker Peta Leaflet Fix Layout */
+.kkn-leaflet-marker-clean {
+  background: transparent !important;
+  border: none !important;
+}
+
+.kkn-pin-pill {
+  background: rgba(17, 17, 27, 0.85);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
